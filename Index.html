@@ -1,0 +1,146 @@
+﻿<!--Libreria
+Creare l'interfaccia grafica del sistema di gestione del magazzino della libreria
+
+Gestione del magazzino della libreria
+L'utente deve poter
+- aggiungere un libro
+- eliminare un libro
+- visualizzare tutti i libri
+
+Il libro ha:
+•Codice ISBN
+•Titolo
+•Autore
+•Genere
+•Quantità
+•Disponibile (si o no)
+
+Ogni pagina ha lo stesso jumbotron, barra di navigazione e footer.
+La barra di navigazione ha i link per le pagine:
+- Index.html -> Home (nella nav bar)
+- Add.html -> Aggiungi libro
+
+Index
+Visualizzare i libri in magazzino:
+Visualizzare la lista di libri con le varie informazioni su ogni libro.
+Nell'ultima colonna deve esserci un'icona (che porta a una pagina di modifica del libro) e un'icona
+che porta apre una pop up (modal) per cancellare il libro
+
+Add
+Deve contenere una form per inserire tutti i campi, un pulsante submit e uno che riporta all'home.
+Inserire le validazioni:
+- ISBN: 13 cifre, solo numeri
+- Autore: solo lettere dell'alfabeto
+- Quantità: minimo 1
+Il genere deve essere scelto tra alcuni predefiniti.
+ISBN è obbligatorio, quantità obbligatoria.
+
+Edit
+Si può modificare solo la quantità e disponibile/non disponibile.
+
+Pop-up Delete
+Deve contenere un messaggio:
+Vuoi eliminare il libro?
+Deve contenere due pulsanti Si (che 'salva') e No (che chiude la pop-up)-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HomePage</title>
+    <link rel="stylesheet" href="StyleSheet.css?ts=<?=time()?>&quot">
+</head>
+<body>
+    <div class="sidenav">
+        <a href="Index.html" class="w3-bar-item w3-button">Home</a><br />
+        <a href="Add.html" class="w3-bar-item w3-button">Aggiungi</a><br />
+     
+    </div>
+
+    <div class="main">
+
+        <header>
+            <h1>&nbsp; Benvenuti in Libreria</h1>
+        </header>
+     
+        <main>
+            <table border="0" width="100%" cellpading="10" cellspacing="3">
+                <thead>
+                    <tr>
+                        <th>Codice ISBN</th>
+                        <th>Titolo</th>
+                        <th>Autore</th>
+                        <th>Genere</th>
+                        <th>Disponibile</th>
+                        <th>Quantità</th>
+                        <th>Modifica</th>
+                        <th>Elimina</th>
+
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td>3458912450156</td>
+                    <td>La Divina Commedia</td>
+                    <td>Dante Alighieri</td>
+                    <td>Classico</td>
+                    <td>Si</td>
+                    <td>10</td>
+                    <td><a href="ModificaLibro.html"><img src="https://img.icons8.com/ios/452/book-and-pencil.png" width="20" height="20"></a></td>
+                    <td><a href="EliminaLibro.html"><img src="https://banner2.cleanpng.com/20191112/jgu/transparent-solid-web-buttons-icon-trash-icon-delete-icon-5dcb353c1c3720.1008941715735985241156.jpg" width="20" height="20"></a></td>
+                </tr>
+                <tr>
+                    <td>3458912450156</td>
+                    <td>I Promessi Sposi</td>
+                    <td>Alessandro Manzoni</td>
+                    <td>Romanzo</td>
+                    <td>Si</td>
+                    <td>13</td>
+                    
+                    <td><a href="ModificaLibro.html"><img src="https://img.icons8.com/ios/452/book-and-pencil.png" width="20" height="20"></a></td>
+                    <td><a href="EliminaLibro.html"><img src="https://banner2.cleanpng.com/20191112/jgu/transparent-solid-web-buttons-icon-trash-icon-delete-icon-5dcb353c1c3720.1008941715735985241156.jpg" width="20" height="20"></a></td>
+                </tr>
+                <tr>
+                    <td>3458912450156</td>
+                    <td>Uno, Nessuno e Centomila</td>
+                    <td>Luigi Pirandello</td>
+                    <td>Romanzo</td>
+                    <td>No</td>
+                    <td>0</td>
+                    <td><a href="ModificaLibro.html"><img src="https://img.icons8.com/ios/452/book-and-pencil.png" width="20" height="20"></a></td>
+                    <td><a href="EliminaLibro.html"><img src="https://banner2.cleanpng.com/20191112/jgu/transparent-solid-web-buttons-icon-trash-icon-delete-icon-5dcb353c1c3720.1008941715735985241156.jpg" width="20" height="20"></a></td>
+                </tr>
+                <tr>
+                    <td>3458912450156</td>
+                    <td>Uno, Nessuno e Centomila</td>
+                    <td>Luigi Pirandello</td>
+                    <td>Romanzo</td>
+                    <td>No</td>
+                    <td>0</td>
+                    <td><a href="ModificaLibro.html"><img src="https://img.icons8.com/ios/452/book-and-pencil.png" width="20" height="20"></a></td>
+                    <td><a href="EliminaLibro.html"><img src="https://banner2.cleanpng.com/20191112/jgu/transparent-solid-web-buttons-icon-trash-icon-delete-icon-5dcb353c1c3720.1008941715735985241156.jpg" width="20" height="20"></a></td>
+                </tr>
+                <tr>
+                    <td>3458912450156</td>
+                    <td>Uno, Nessuno e Centomila</td>
+                    <td>Luigi Pirandello</td>
+                    <td>Romanzo</td>
+                    <td>No</td>
+                    <td>0</td>
+                    <td><a href="ModificaLibro.html"><img src="https://img.icons8.com/ios/452/book-and-pencil.png" width="20" height="20"></a></td>
+                    <td><a href="EliminaLibro.html"><img src="https://banner2.cleanpng.com/20191112/jgu/transparent-solid-web-buttons-icon-trash-icon-delete-icon-5dcb353c1c3720.1008941715735985241156.jpg" width="20" height="20"></a></td>
+                </tr>
+            </table>
+
+
+        </main>
+        <br />
+        <br />
+        <center>
+            <footer>&copy; Magazzino | <a href="/Contatti.html">Contatti</a></footer>
+        </center>
+        </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet.css?ts=<?=time()?>&quot">
+</head>
+<body>
+    <div class="sidenav">
+        <a href="Index.html" class="w3-bar-item w3-button">Home</a><br />
+        <a href="Add.html" class="w3-bar-item w3-button">Aggiungi</a><br />
+
+    </div>
+
+    <div class="main">
+
+        <header>
+            <h1>&nbsp; Benvenuti in Libreria</h1>
+        </header>
+
+        <main>
+            <form>
+                <div class="container1">
+                    <label>Titolo</label>
+                    <input id="ElemSx" type="text" placeholder="Inserisci il titolo del libro" required="required" />
+                    <label>Autore</label>
+                    <input id="ElemDx" type="text" placeholder="Es. Luigi Pirandello" required="required" />
+                    <label>Genere</label>
+                    <input id="ElemDx" type="text" placeholder="Es. Luigi Pirandello" required="required" />
+                    <br />
+                    <label><input id="ElemSx" type="radio" value="1" name="Disponibilità" required="required" />Disponibile</label>
+                    <label><input id="ElemDx" type="radio" value="2" name="Disponibilità" required="required" />Non Disponibile</label>
+                    <br />
+                    <label>Codice ISBN</label>
+
+                    <input id="ElemSx" type="text" placeholder="Inserisci il cod. ISBN" required="required" pattern="[0-9]{13}" title="Massimo 13 cifre" />
+                    <br />
+                    <label>Quantità</label>
+                    <input id="Quantità" type="number" placeholder="1" required="required" />
+                    <br />
+
+                    <input id="ElemDx" type="submit" value="Aggiungi Libro" style="width:100px" />
+                </div>
+            </form>
+
+
+        </main>
+        <br />
+        <br />
+        <center>
+            <footer>&copy; Magazzino | <a href="/Contatti.html">Contatti</a></footer>
+        </center>
+    </div>
+</body>
+</html>
